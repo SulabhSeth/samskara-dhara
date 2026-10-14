@@ -70,7 +70,7 @@ export default function HomePage() {
           </ul>
         </Container>
       </section>
-      <section className="py-8">
+      {/* <section className="py-8">
         <Container className="max-w-4xl text-center">
           <h2 className="text-3xl">A Warm Welcome</h2>
           <p className="mx-auto mt-3 max-w-xl text-earth-soft">
@@ -84,7 +84,7 @@ export default function HomePage() {
 />
           </div>
         </Container>
-      </section>
+      </section> */}
 
       {/* <section className="py-16">
         <Container>

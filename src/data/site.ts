@@ -10,9 +10,9 @@ export const site = {
   location: "Delhi NCR (In-person by arrangement)",
   global: "Online sessions available worldwide",
   social: {
-    youtube: "#",
-    instagram: "#",
-    facebook: "#",
+    // youtube: "#",
+    instagram: "https://instagram.com/sukavakadas?psln=MnFzdzFob3ZtZGZy",
+    // facebook: "#",
   },
 };
 
@@ -28,11 +28,11 @@ export const nav = [
 export type IconName = "lotus" | "home" | "book" | "person";
 
 export const offerings: { title: string; icon: IconName; href: string }[] = [
-  { title: "Samskaras & Sacred Ceremonies", icon: "lotus", href: "/samskaras" },
-  { title: "Home Deity Worship", icon: "home", href: "/services#home-deity-worship" },
-  { title: "Family Life as an Ashram", icon: "home", href: "/services#family-life-ashram" },
+  { title: "Samskaras & Sacred Ceremonies", icon: "lotus", href: "/services/samskaras" },
+  { title: "Home Deity Worship", icon: "home", href: "/services/home-deity-worship" },
+  { title: "Family Life as an Ashram", icon: "home", href: "/services/family-life-ashram" },
   { title: "Spiritual Education & Courses", icon: "book", href: "/seminars" },
-  { title: "Counselling & Guidance", icon: "person", href: "/services#counselling" },
+  { title: "Counselling & Guidance", icon: "person", href: "/services/counselling" },
 ];
 
 export const services: {
