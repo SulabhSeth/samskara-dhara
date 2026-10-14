@@ -52,10 +52,10 @@ export default function ContactPage() {
             </li>
           ))}
         </ul>
-        <div className="rounded-md border border-gold/30 bg-ivory p-6">
+        {/* <div className="rounded-md border border-gold/30 bg-ivory p-6">
           <h2 className="mb-5 text-xl">Send a Message</h2>
           <ContactForm />
-        </div>
+        </div> */}
       </Container>
     </>
   );

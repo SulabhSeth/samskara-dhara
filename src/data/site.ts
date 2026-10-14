@@ -121,7 +121,7 @@ export const courses = [
 export const upcomingSeminars = [
   {
     title: "Creating a Krishna-Conscious Home",
-    date: "Sat, 26 Apr 2025",
+    date: "COMING SOON",
     mode: "Online",
     duration: "1.5 hours",
   },
@@ -131,7 +131,7 @@ export const posts = [
   {
     slug: "meaning-of-grihastha-ashram",
     title: "The Meaning of a Grihastha Ashram in Today's World",
-    date: "Apr 10, 2025",
+    date: "",
     image: "blog-grihastha" as ImageKey,
     excerpt:
       "",
@@ -139,7 +139,7 @@ export const posts = [
   {
     slug: "why-home-deity-worship-matters",
     title: "Why Home Deity Worship Matters",
-    date: "Apr 3, 2025",
+    date: "",
     image: "blog-deity-worship" as ImageKey,
     excerpt:
       "",
@@ -147,7 +147,7 @@ export const posts = [
   {
     slug: "key-teachings-bhagavad-gita",
     title: "Key Teachings from Bhagavad Gita for Daily Life",
-    date: "Mar 27, 2025",
+    date: "",
     image: "blog-gita" as ImageKey,
     excerpt:
       "",
@@ -155,7 +155,7 @@ export const posts = [
   {
     slug: "understanding-the-samskaras",
     title: "Understanding the Samskaras",
-    date: "Mar 20, 2025",
+    date: "",
     image: "blog-samskaras" as ImageKey,
     excerpt:
       "",
