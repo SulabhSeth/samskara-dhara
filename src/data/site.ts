@@ -91,22 +91,22 @@ export const services: {
 ];
 
 export const samskaras = [
-  "Vivaha (Wedding)",
-  "Garbhadhana Samskar",
-  "Pumsavana Samskar",
-  "Simantonnayana (Baby Shower)",
-  "Shoshayanti Homa(For safe delivery)",
-  "Jatakarma (Birth Ceremony)",
-  "Nishkramanam(Taking the child outside for the first time)",
-  "Namakarana (Naming Ceremony)",
-  "Annaprashana (First Solid Food)",
-  "Karnavedha (Piercing the ears)",
-  "Chudakarana (First Haircut)",
-  "Vidyarambha (Beginning of Education) ",
-  "Upanayana (Sacred Thread Ceremony)",
-  "Griha Pravesh (House Warming)",
-  "Bhumi Pujan (Land Blessing)",
-  "Narsingh Yagya"
+  // "Vivaha (Wedding)",
+  // "Garbhadhana Samskar",
+  // "Pumsavana Samskar",
+  // "Simantonnayana (Baby Shower)",
+  // "Shoshayanti Homa(For safe delivery)",
+  // "Jatakarma (Birth Ceremony)",
+  // "Nishkramanam(Taking the child outside for the first time)",
+  // "Namakarana (Naming Ceremony)",
+  // "Annaprashana (First Solid Food)",
+  // "Karnavedha (Piercing the ears)",
+  // "Chudakarana (First Haircut)",
+  // "Vidyarambha (Beginning of Education) ",
+  // "Upanayana (Sacred Thread Ceremony)",
+  // "Griha Pravesh (House Warming)",
+  // "Bhumi Pujan (Land Blessing)",
+  // "Narsingh Yagya"
 ];
 
 export const courses = [

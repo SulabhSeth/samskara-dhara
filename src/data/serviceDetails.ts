@@ -21,7 +21,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
   samskaras: {
     includes: samskaras,
     
-    related: { label: "See all samskaras", href: "/samskaras" },
+    // related: { label: "See all samskaras", href: "/samskaras" },
     glimpses: true,
   },
   "home-deity-worship": {

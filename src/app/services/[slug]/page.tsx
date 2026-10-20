@@ -6,6 +6,7 @@ import FullVideo from "@/components/FullVideo";
 import { Button, Container, Note, PageHero } from "@/components/ui";
 import { serviceDetails } from "@/data/serviceDetails";
 import { services } from "@/data/site";
+import SamskaraSections from "@/components/SamskaraSections";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.id }));
@@ -34,6 +35,7 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
         title={service.title}
         subtitle={service.description}
       />
+      {slug === "samskaras" && <SamskaraSections />}
 
       {/* <Container className="py-14">
         <Clip
@@ -47,7 +49,14 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
 
       <Container className="grid gap-12 pb-14 md:grid-cols-[1fr_1.2fr]">
         <div>
-          <h2 className="text-2xl">What this includes</h2>
+          {slug !== "samskaras" && (
+  <>
+    <h2 className="text-2xl">What this includes</h2>
+    <ul className="mt-6 space-y-4">
+      ...your existing list items...
+    </ul>
+  </>
+)}
           <ul className="mt-6 space-y-4">
             {detail.includes.map((item) => (
               <li key={item} className="flex items-start gap-3 text-forest">
