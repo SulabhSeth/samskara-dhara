@@ -72,7 +72,7 @@ export const groups: SamskaraGroup[] = [
 },
 
       { name: "Pumsavana Samskar", description: soon("Pumsavana") },
-      { name: "Simantonnayana (Baby Shower)", description: soon("Simantonnayana") },
+      { name: "Simantonnayana (Baby Shower)", description: "According to the Asvalayana Smrti: Evil demons bent on sucking blood, come to the pregnant woman to devour the fetus. In order to remove them, the husband should perform Simantonnayana.\n\nFrom the fourth month of pregnancy, the formation of the mind of the child begins. therefore the pregnant woman is required to take the utmost care to avoid any physical shock to the fetus." },
       { name: "Shoshyanti Homa (For safe delivery)", description: soon("Shoshyanti Homa") },
     ],
   },
@@ -82,19 +82,20 @@ export const groups: SamskaraGroup[] = [
       { name: "Jatakarma (Birth Ceremony)", description: soon("Jatakarma") },
       {
         name: "Nishkramanam (Taking the child outside for the first time)",
-        description: soon("Nishkramanam"),
+        description: "The mother and child should remain indoors however until the third lunar day of the third waxing moon after the child’s birth.",
       },
-      { name: "Namakarana (Naming Ceremony)", description: soon("Namakarana") },
-      { name: "Annaprashana (First Solid Food)", description: soon("Annaprashana") },
-      { name: "Karnavedha (Piercing the ears)", description: soon("Karnavedha") },
-      { name: "Chudakarana (First Haircut)", description: soon("Chudakarana") },
+      { name: "Namakarana (Naming Ceremony)", description: "The child should be named on the tenth, twelfth, hundred and first day, or one full year from his birth." },
+      { name: "Paustika Karma (Ceremony for continued health of the child)", description: "This ceremony should be performed every month, during the child’s first year, on the tithi and pakìa (waxing or waning phase of the moon) corresponding to the tithi and pakìa on which the child was born." },
+      { name: "Annaprashana (First Solid Food)", description: "In the case of a male child the rite should be performed in the sixth or eighth month, on an auspicious day. In the case of girl, it should be performed in the fifth or seventh month, on an auspicious day." },
+      { name: "Karnavedha (Piercing the ears)", description: "According to Suëruta, this ceremony should be performed in the sixth or seventh month after birth, though it may be performed along with the Câéàkaraêa ceremony or at Upanayanam." },
+      { name: "Chudakarana (First Haircut)", description: "This saîskàra should be performed during the male child’s first year (between the child’s first and second year — the best option), third year (second option) or fifth year (third option)." },
     ],
   },
   {
     title: "Education",
     items: [
-      { name: "Vidyarambha (Beginning of Education)", description: soon("Vidyarambha") },
-      { name: "Upanayana (Sacred Thread Ceremony)", description: soon("Upanayana") },
+      { name: "Vidyarambha (Beginning of Education)", description: "This is performed when the child is five, or at the same time as the hair-cutting ceremony, but before Upanayanam." },
+      { name: "Upanayana (Sacred Thread Ceremony)", description: "The upanayanam ceremony should be conducted, for bràhmaêas, counting eight years from conception or eight years from the birth of the son, on an auspicious day. If that is not possible, the ceremony should take place latest before the sixteenth year from the birth of the child, has passed. According to the original rules, if there is more delay, the child is not entitled to undergo the ceremony and receive the sacred thread." },
     ],
   },
   {

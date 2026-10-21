@@ -204,6 +204,96 @@ function renderBlock(block: Block, i: number) {
           </div>
         </details>
       );
+
+    case "mantraSteps":
+      return (
+        <div key={i} className="space-y-3">
+          {block.title && (
+            <h4 className="font-heading text-lg text-forest sm:text-xl">{block.title}</h4>
+          )}
+          {block.intro && <p className={body}>{block.intro}</p>}
+          <ol className="space-y-3">
+            {block.items.map((s, n) => (
+              <li
+                key={`${s.mantra}-${n}`}
+                className="flex gap-4 rounded-xl border border-gold/30 bg-ivory p-4 sm:p-5"
+              >
+                <span
+                  aria-hidden
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest text-xs font-semibold text-ivory"
+                >
+                  {(block.startAt ?? 1) + n}
+                </span>
+                <div className="min-w-0">
+                  <p className="font-sanskrit text-lg font-semibold leading-snug text-forest sm:text-xl">
+                    {s.mantra}
+                    {s.suffix && (
+                      <span className="ml-2 align-middle font-body text-[11px] font-semibold uppercase tracking-wider text-gold">
+                        {s.suffix}
+                      </span>
+                    )}
+                  </p>
+                  <p className="mt-1 text-[15px] leading-7 text-earth-soft">{s.action}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      );
+
+    case "verse":
+      return (
+        <div
+          key={i}
+          className="rounded-2xl border border-gold/30 bg-gradient-to-br from-ivory via-[#fbf6e9] to-[#f3ead5] px-5 py-6 text-center sm:px-8"
+        >
+          {block.title && (
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              {block.title}
+            </p>
+          )}
+          <div className="font-sanskrit text-lg italic leading-9 text-forest sm:text-xl sm:leading-10">
+            {block.lines.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
+          {block.translation && (
+            <p className="mx-auto mt-4 max-w-xl border-t border-gold/25 pt-4 text-sm leading-7 text-earth-soft">
+              {block.translation}
+            </p>
+          )}
+          {block.reference && (
+            <p className="mt-4">
+              <span className="inline-flex rounded-full border border-forest/15 bg-forest/[0.05] px-3 py-1 text-xs font-semibold text-forest">
+                {block.reference}
+              </span>
+            </p>
+          )}
+        </div>
+      );
+
+    case "collapsible":
+      return (
+        <details
+          key={i}
+          className="group overflow-hidden rounded-2xl border border-gold/30 bg-ivory"
+        >
+          <summary className="flex cursor-pointer list-none items-center gap-4 px-5 py-4 transition-colors hover:bg-ivory-deep/60 sm:px-6 [&::-webkit-details-marker]:hidden">
+            <span className="min-w-0 flex-1">
+              <span className="block font-heading text-lg text-forest sm:text-xl">
+                {block.title}
+              </span>
+              {block.summary && (
+                <span className="mt-0.5 block text-sm text-earth-soft">{block.summary}</span>
+              )}
+            </span>
+            <Chevron className="group-open:rotate-180" />
+          </summary>
+          <div className="space-y-6 border-t border-gold/25 px-4 pb-6 pt-5 sm:px-6">
+            {block.blocks.map(renderBlock)}
+          </div>
+        </details>
+      );
   }
 }
 

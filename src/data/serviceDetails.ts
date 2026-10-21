@@ -19,7 +19,7 @@ export type ServiceDetail = {
  */
 export const serviceDetails: Record<string, ServiceDetail> = {
   samskaras: {
-    includes: samskaras,
+    includes: samskaras, 
     
     // related: { label: "See all samskaras", href: "/samskaras" },
     glimpses: true,
@@ -29,13 +29,15 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Establishing deity worship at home",
       "Basic daily worship routines",
       "Elaborate worship, offerings and etiquette",
-      "Guidance suited to your family and space",
+      "Guidance suited to family and space",
     ],
+    // glimpses: true,
     
     related: { label: "View seminars & courses", href: "/seminars" },
   },
   "family-life-ashram": {
     includes: [
+      "Chosing the right partner and preparing for entering the Grhastha Ashram",
       "Grhastha ashram — culture and values",
       "Harmonising family life with spiritual practice",
       "Daily household routines",

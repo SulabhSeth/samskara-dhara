@@ -7,6 +7,7 @@ import { Button, Container, Note, PageHero } from "@/components/ui";
 import { serviceDetails } from "@/data/serviceDetails";
 import { services } from "@/data/site";
 import SamskaraSections from "@/components/SamskaraSections";
+import DeityWorshipSections from "@/components/DeityWorshipSections";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.id }));
@@ -36,6 +37,7 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
         subtitle={service.description}
       />
       {slug === "samskaras" && <SamskaraSections />}
+      {slug === "home-deity-worship" && <DeityWorshipSections />}
 
       {/* <Container className="py-14">
         <Clip
@@ -49,28 +51,39 @@ export default async function ServicePage(props: PageProps<"/services/[slug]">) 
 
       <Container className="grid gap-12 pb-14 md:grid-cols-[1fr_1.2fr]">
         <div>
-          {slug !== "samskaras" && (
-  <>
-    <h2 className="text-2xl">What this includes</h2>
-    <ul className="mt-6 space-y-4">
-      ...your existing list items...
-    </ul>
-  </>
-)}
-          <ul className="mt-6 space-y-4">
-            {detail.includes.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-forest">
-                <SmallLotus className="mt-1 h-5 w-5 shrink-0 text-gold" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+                    {slug !== "samskaras" && (
+            <>
+              <h2 className="text-2xl">What this includes</h2>
+              <ul className="mt-6 space-y-4">
+                {detail.includes.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-forest">
+                    <SmallLotus className="mt-1 h-5 w-5 shrink-0 text-gold" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          
           <div className="mt-8 space-y-6">
-            <Note>
+            {/* <Note>
               Each service begins with a conversation about your needs and the
               appropriate preparations. Offered on a voluntary donation basis.
-            </Note>
+            </Note> */}
             <div className="flex flex-wrap gap-3">
+                            <a
+                href="https://www.instagram.com/sukavakadas?psln=MnFzdzFob3ZtZGZy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-sm bg-[linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)] px-6 py-3 text-sm font-medium tracking-wide text-white transition hover:brightness-110"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+                </svg>
+                View Glimpses on Instagram
+              </a>
               <Button href="/contact">Get in Touch</Button>
               {detail.related && (
                 <Button href={detail.related.href} variant="outline">

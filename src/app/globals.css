@@ -13,6 +13,7 @@
   --font-heading: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-montserrat), system-ui, sans-serif;
   --font-deva: var(--font-devanagari), var(--font-playfair), serif;
+  --font-sanskrit: var(--font-noto-serif), var(--font-playfair), Georgia, serif;
 
   --animate-fade-up: fade-up 0.8s ease-out both;
   --animate-fade-in: fade-in 1s ease-out both;

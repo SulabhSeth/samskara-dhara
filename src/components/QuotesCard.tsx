@@ -15,6 +15,13 @@ export default function QuotesCard({ title, intro, quotes }: Props) {
   const [index, setIndex] = useState(0);
   const count = quotes.length;
   const quote = quotes[index];
+  const paragraphs = quote.text.split(/\n\s*\n/);
+  const size =
+    quote.text.length > 600
+      ? "text-base sm:text-lg"
+      : quote.text.length > 220
+        ? "text-lg sm:text-xl"
+        : "text-xl sm:text-2xl";
 
   const open = () => {
     setIndex(0);
@@ -31,46 +38,35 @@ export default function QuotesCard({ title, intro, quotes }: Props) {
 
   return (
     <>
-            <button
+      <button
         type="button"
         onClick={open}
         aria-haspopup="dialog"
         className="group relative block w-full overflow-hidden rounded-md bg-forest px-6 py-9 text-left text-ivory shadow-sm transition-colors hover:bg-forest-dark sm:px-10"
       >
-        <div className="flex items-center justify-between gap-6">
-          <div className="flex-1">
-            <span
-              aria-hidden
-              className="pointer-events-none absolute -top-6 right-6 font-heading text-[9rem] leading-none text-gold/25"
-            >
-              &rdquo;
-            </span>
-            <span className="relative block text-xs font-medium uppercase tracking-[0.25em] text-gold-light">
-              Words of Srila Prabhupada
-            </span>
-            <span className="relative mt-3 block font-heading text-2xl sm:text-3xl">
-              {title}
-            </span>
-            <span className="relative mt-3 block max-w-xl text-sm leading-relaxed text-ivory/80">
-              {intro}
-            </span>
-            <span className="relative mt-5 inline-flex items-center gap-2 text-sm font-medium text-gold-light">
-              Read the quotes
-              <span aria-hidden className="transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </span>
-          </div>
-
-          {/* Image placeholder: replace with your image in /public/images */}
-          <div className="relative hidden h-48 w-44 shrink-0 overflow-hidden rounded-md sm:block">
-            <img
-              src="/images/prabhupada.jpg"
-              alt="Srila Prabhupada"
-              className="h-full w-full object-cover"
-            />
-          </div>
-        </div>
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -top-6 right-6 font-heading text-[9rem] leading-none text-gold/25"
+        >
+          &rdquo;
+        </span>
+        <span className="relative block text-xs font-medium uppercase tracking-[0.25em] text-gold-light">
+          Words of Srila Prabhupada
+        </span>
+        <span className="relative mt-3 block font-heading text-2xl sm:text-3xl">
+          {title}
+        </span>
+        {intro && (
+          <span className="relative mt-3 block max-w-xl text-sm leading-relaxed text-ivory/80">
+            {intro}
+          </span>
+        )}
+        <span className="relative mt-5 inline-flex items-center gap-2 text-sm font-medium text-gold-light">
+          Read the quotes
+          <span aria-hidden className="transition-transform group-hover:translate-x-1">
+            →
+          </span>
+        </span>
       </button>
 
       <dialog
@@ -80,7 +76,7 @@ export default function QuotesCard({ title, intro, quotes }: Props) {
         onClick={(e) => {
           if (e.target === dialog.current) close();
         }}
-        className="m-auto w-[min(92vw,44rem)] rounded-md border border-gold/50 bg-ivory p-0 text-earth backdrop:bg-forest-dark/70"
+        className="m-auto max-h-[90vh] w-[min(92vw,44rem)] overflow-y-auto rounded-md border border-gold/50 bg-ivory p-0 text-earth backdrop:bg-forest-dark/70"
       >
         <div className="p-6 sm:p-10">
           <div className="flex items-start justify-between gap-4">
@@ -103,11 +99,20 @@ export default function QuotesCard({ title, intro, quotes }: Props) {
           </div>
 
           <blockquote className="mt-8 min-h-48" aria-live="polite">
-            <p className="font-heading text-xl italic leading-relaxed text-forest sm:text-2xl">
-              &ldquo;{quote.text}&rdquo;
-            </p>
+            {paragraphs.map((para, n) => (
+              <p
+                key={n}
+                className={`font-heading italic leading-relaxed text-forest ${size} ${
+                  n > 0 ? "mt-4" : ""
+                }`}
+              >
+                {n === 0 && "\u201C"}
+                {para}
+                {n === paragraphs.length - 1 && "\u201D"}
+              </p>
+            ))}
             <footer className="mt-5 text-sm text-earth-soft">
-              — Srila Prabhupada, {quote.source}
+              — Srila Prabhupada, {quote.source.trim()}
             </footer>
           </blockquote>
 

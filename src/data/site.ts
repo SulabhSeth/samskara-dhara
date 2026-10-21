@@ -48,7 +48,7 @@ export const services: {
     title: "Samskaras & Sacred Ceremonies",
     description:
       "Guidance and performance of traditional samskaras — Garbhadhana, Simantonnayana, post-birth samskaras, Vivaha, Griha Pravesh, Bhumi Pujan and more.",
-    cta: "Explore Services",
+    cta: "Explore",
     href: "/services/samskaras",
     image: "service-samskaras",
   },
@@ -57,7 +57,7 @@ export const services: {
     title: "Home Deity Worship",
     description:
       "Workshops and guidance on establishing and performing deity worship at home — daily routines, offerings and etiquette, in both basic and elaborate forms.",
-    cta: "Explore Workshops",
+    cta: "Explore",
     href: "/services/home-deity-worship",
     image: "service-home-deity-worship",
   },
@@ -66,7 +66,7 @@ export const services: {
     title: "Family Life as an Ashram",
     description:
       "Guidance on grhastha culture and on harmonising family life with spiritual practice, so the home becomes a place of remembrance and service.",
-    cta: "Explore Workshops",
+    cta: "Explore",
     href: "/services/family-life-ashram",
     image: "service-family-life-ashram",
   },
@@ -75,7 +75,7 @@ export const services: {
     title: "Spiritual Education",
     description:
       "Seminars and courses on Bhagavad Gita and other Vaishnava literature.",
-    cta: "Explore Courses",
+    cta: "Explore",
     href: "/services/education",
     image: "service-education",
   },
